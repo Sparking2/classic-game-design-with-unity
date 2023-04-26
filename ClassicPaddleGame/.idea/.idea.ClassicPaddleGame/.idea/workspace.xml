@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6623abcf-cd9a-4fd5-abb1-8615f760dea6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/BallScript.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/BallScript.cs.meta" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Assets/Mat_Paddle.mat" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Assets/Mat_Paddle.mat.meta" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Assets/P1.cs" afterDir="false" />
