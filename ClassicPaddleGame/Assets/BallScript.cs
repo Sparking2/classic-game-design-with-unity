@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class BallScript : MonoBehaviour
 {
         private void Start()
@@ -17,6 +18,12 @@ public class BallScript : MonoBehaviour
 
         private void Update()
         {
+        }
+
+        private void OnCollisionEnter( Collision other )
+        {
+                AudioSource audio = GetComponent<AudioSource>();
+                audio.Play();
         }
 
         private IEnumerator WaitForIt()

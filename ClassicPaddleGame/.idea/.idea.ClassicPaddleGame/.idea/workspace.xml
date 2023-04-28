@@ -7,6 +7,10 @@
     <list default="true" id="6623abcf-cd9a-4fd5-abb1-8615f760dea6" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/Assets/BallRelaunch.cs" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Assets/BallRelaunch.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/pluck.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/pluck.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ClassicPaddleGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ClassicPaddleGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BallScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BallScript.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
