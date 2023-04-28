@@ -5,16 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6623abcf-cd9a-4fd5-abb1-8615f760dea6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/BallScript.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/BallScript.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Mat_Paddle.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Mat_Paddle.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/P1.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/P1.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/P2.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/P2.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ClassicPaddleGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ClassicPaddleGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/BallRelaunch.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/BallRelaunch.cs.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,22 +24,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "settings.editor.selected.configurable": "reference.settings.ide.settings.new.ui"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.new.ui&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "E:\\scoop\\apps\\rider\\current\\profile\\config\\resharper-host\\DecompilerCache",
-      "E:\\scoop\\apps\\rider\\current\\profile\\config\\resharper-host\\SourcesCache",
-      "C:\\Users\\spark\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;E:\\scoop\\apps\\rider\\current\\profile\\config\\resharper-host\\DecompilerCache&quot;,
+      &quot;E:\\scoop\\apps\\rider\\current\\profile\\config\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\spark\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="E:\Unity\Engine\2022.2.13f1\Editor\Unity.exe" />
