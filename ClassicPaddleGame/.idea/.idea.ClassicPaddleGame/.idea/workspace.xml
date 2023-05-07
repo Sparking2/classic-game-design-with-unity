@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6623abcf-cd9a-4fd5-abb1-8615f760dea6" name="Changes" comment="🎵 feat: add pluck sound effect to ball collision&#10;🔊 chore: add AudioSource component to BallScript&#10;🚀 chore: update workspace.xml to include pluck.wav and BallScript.cs changes">
-      <change afterPath="$PROJECT_DIR$/Assets/Scoring.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scoring.cs.meta" afterDir="false" />
+    <list default="true" id="6623abcf-cd9a-4fd5-abb1-8615f760dea6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ClassicPaddleGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ClassicPaddleGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BallRelaunch.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BallRelaunch.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
