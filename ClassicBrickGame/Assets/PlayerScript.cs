@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
@@ -22,5 +23,19 @@ public class PlayerScript : MonoBehaviour
         float h;
         h = 30.0f * Time.deltaTime * Input.GetAxis("Mouse X");
         transform.Translate(h, 0, 0);
+    }
+
+    private void OnTriggerEnter( Collider other )
+    {
+        BallScript.yspeed = -BallScript.yspeed;
+        if ( other.transform.position.x > gameObject.transform.position.x )
+        {
+            BallScript.xspeed = Mathf.Abs(BallScript.xspeed);
+        }
+        else
+        {
+            BallScript.xspeed = -Math.Abs(BallScript.xspeed);
+        }
+        BallScript.collflag = true;
     }
 }
