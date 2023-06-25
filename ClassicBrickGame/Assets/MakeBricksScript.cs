@@ -13,7 +13,7 @@ public class MakeBricksScript : MonoBehaviour
                 cube.transform.position = new Vector3(x * 2 - 14, y - 1, 0);
                 cube.transform.localScale = new Vector3(1.9f, 0.9f, 1);
                 
-                // cube.AddComponent<BrickScript>();
+                cube.AddComponent<BrickScript>();
 
                 Material m_material = cube.GetComponent<Renderer>().material;
                 if ( y < 2 )
