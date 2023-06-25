@@ -16,7 +16,14 @@ public class MakeBricksScript : MonoBehaviour
                 // cube.AddComponent<BrickScript>();
 
                 Material m_material = cube.GetComponent<Renderer>().material;
-                m_material.color = Color.yellow;
+                if ( y < 2 )
+                    m_material.color = Color.yellow;
+                else if ( y < 4 )
+                    m_material.color = Color.cyan;
+                else if ( y < 6 )
+                    m_material.color = Color.blue;
+                else if(y < 8)
+                    m_material.color = Color.red;
 
                 cube.GetComponent<Collider>().isTrigger = true;
             }
