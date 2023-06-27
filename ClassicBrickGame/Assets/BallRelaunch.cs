@@ -5,6 +5,7 @@ public class BallRelaunch : MonoBehaviour
 {
         private void OnTriggerEnter( Collider other )
         {
+                Scoring.lives--;
                 other.transform.position = new Vector3(0, -7, 0);
                 BallScript.xspeed = 8.0f;
                 BallScript.yspeed = -8.0f;
