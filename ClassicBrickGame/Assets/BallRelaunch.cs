@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BallRelaunch : MonoBehaviour
 {
@@ -10,5 +11,10 @@ public class BallRelaunch : MonoBehaviour
                 BallScript.xspeed = 8.0f;
                 BallScript.yspeed = -8.0f;
                 BallScript.launchTimer = 1.0f;
+
+                if ( Scoring.lives == 0 )
+                {
+                        SceneManager.LoadScene("BrickTitleScene");
+                }
         }
 }

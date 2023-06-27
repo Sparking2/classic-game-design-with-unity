@@ -18,7 +18,7 @@ public class BallScript : MonoBehaviour
     {
         launchTimer = 2.0f;
         xspeed = 8.0f;
-        yspeed = 8.0f;
+        yspeed = -8.0f;
         collflag = true;
     }
 
