@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class shipscript : MonoBehaviour
 {
@@ -36,6 +37,15 @@ public class shipscript : MonoBehaviour
         if ( transform.position.x > screenBoundary )
         {
             transform.position = new Vector3(screenBoundary, transform.position.y, transform.position.z);
+        }
+    }
+
+    private void OnTriggerEnter2D( Collider2D other )
+    {
+        if ( other.tag == "ashot" )
+        {
+            Destroy(gameObject);
+            Destroy(other.gameObject);
         }
     }
 }
