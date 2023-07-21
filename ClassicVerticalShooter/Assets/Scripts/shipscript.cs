@@ -3,16 +3,33 @@ using UnityEngine;
 
 public class shipscript : MonoBehaviour
 {
+    public alienfactoryscript alienfactory;
     public float shipSpeed;
     public float screenBoundary;
     public GameObject shot;
 
+    private float deathTimer;
+    
     void Start()
     {
         transform.position = new Vector3(0, -2, 0);
     }
 
-    void Update()
+    private void Update()
+    {
+        if ( GameStateScript.state == GameStateScript.GamePlay )
+        {
+            ShipControl();
+        }
+
+        if ( GameStateScript.state == GameStateScript.StartPlaying )
+        {
+            alienfactory.MakeAliens();
+            GameStateScript.state = GameStateScript.GamePlay;
+        }
+    }
+
+    void ShipControl()
     {
         if ( Input.GetKey("right") )
         {
@@ -42,10 +59,17 @@ public class shipscript : MonoBehaviour
 
     private void OnTriggerEnter2D( Collider2D other )
     {
-        if ( other.tag == "ashot" )
+        if ( GameStateScript.state == GameStateScript.GamePlay )
         {
-            Destroy(gameObject);
-            Destroy(other.gameObject);
+            if ( other.tag == "ashot" )
+            {
+                scoringscript.lives--;
+                if ( scoringscript.lives == 0 )
+                {
+                    Destroy(other.gameObject);
+                    GameStateScript.state = GameStateScript.GameOver;
+                }
+            }
         }
     }
 }

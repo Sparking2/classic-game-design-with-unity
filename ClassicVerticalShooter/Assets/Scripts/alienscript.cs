@@ -13,15 +13,20 @@ public class alienscript : MonoBehaviour
         {
             Instantiate(ashot, new Vector3(transform.position.x, transform.position.y, 0.5f), Quaternion.identity);
         }
+
+        if ( GameStateScript.state == GameStateScript.PressStart )
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void OnTriggerEnter2D( Collider2D other )
     {
-        Debug.Log("hmmmm");
         if ( other.tag == "shot" )
         {
             Destroy(gameObject);
             Destroy(other.gameObject);
+            scoringscript.score += 10;
         }
     }
 }

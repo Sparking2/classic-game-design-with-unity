@@ -17,8 +17,5 @@ public class alienfactoryscript : MonoBehaviour
         }
     }
 
-    private void Start()
-    {
-        MakeAliens();
-    }
+    private void Start() { }
 }
