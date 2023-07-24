@@ -9,14 +9,17 @@ public class alienscript : MonoBehaviour
 
     private void Update()
     {
-        if ( Mathf.FloorToInt(UnityEngine.Random.value * 10000.0f) % chance == 0 )
+        if ( GameStateScript.state == GameStateScript.GamePlay )
         {
-            Instantiate(ashot, new Vector3(transform.position.x, transform.position.y, 0.5f), Quaternion.identity);
-        }
+            if ( Mathf.FloorToInt(UnityEngine.Random.value * 10000.0f) % chance == 0 )
+            {
+                Instantiate(ashot, new Vector3(transform.position.x, transform.position.y, 0.5f), Quaternion.identity);
+            }
 
-        if ( GameStateScript.state == GameStateScript.PressStart )
-        {
-            Destroy(gameObject);
+            if ( GameStateScript.state == GameStateScript.PressStart )
+            {
+                Destroy(gameObject);
+            }
         }
     }
 

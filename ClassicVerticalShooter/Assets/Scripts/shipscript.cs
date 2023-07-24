@@ -9,7 +9,7 @@ public class shipscript : MonoBehaviour
     public GameObject shot;
 
     private float deathTimer;
-    
+
     void Start()
     {
         transform.position = new Vector3(0, -2, 0);
@@ -26,6 +26,29 @@ public class shipscript : MonoBehaviour
         {
             alienfactory.MakeAliens();
             GameStateScript.state = GameStateScript.GamePlay;
+        }
+
+        if ( GameStateScript.state == GameStateScript.Dying )
+        {
+            transform.Rotate(0, 0, Time.deltaTime * 400.0f);
+            deathTimer -= 0.1f;
+            if ( deathTimer < 5.0f )
+            {
+                GetComponent<Renderer>().enabled = false;
+            }
+
+            if ( deathTimer < 0 )
+            {
+                GameStateScript.state = GameStateScript.GamePlay;
+                transform.position = new Vector3(0.0f, transform.position.y, 0.0f);
+                transform.rotation = Quaternion.identity;
+                GetComponent<Renderer>().enabled = true;
+
+                if ( scoringscript.lives == 0 )
+                {
+                    GameStateScript.state = GameStateScript.GameOver;
+                }
+            }
         }
     }
 
@@ -64,11 +87,9 @@ public class shipscript : MonoBehaviour
             if ( other.tag == "ashot" )
             {
                 scoringscript.lives--;
-                if ( scoringscript.lives == 0 )
-                {
-                    Destroy(other.gameObject);
-                    GameStateScript.state = GameStateScript.GameOver;
-                }
+                deathTimer = 10.0f;
+                GameStateScript.state = GameStateScript.Dying;
+                Destroy(other.gameObject);
             }
         }
     }
