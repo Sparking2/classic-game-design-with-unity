@@ -13,6 +13,7 @@ public class alienfactoryscript : MonoBehaviour
             {
                 GameObject al = Instantiate(alien, new Vector3(( i - 7 ) * 0.5f, ( j - 2 ) * 0.8f, 0),
                     Quaternion.identity);
+                al.GetComponent<alienscript>().state = 0;
             }
         }
     }

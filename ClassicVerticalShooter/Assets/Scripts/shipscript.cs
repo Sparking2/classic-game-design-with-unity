@@ -67,6 +67,7 @@ public class shipscript : MonoBehaviour
         if ( Input.GetKeyDown("space") )
         {
             Instantiate(shot, new Vector3(transform.position.x, transform.position.y, 0.5f), Quaternion.identity);
+            gameObject.GetComponent<AudioSource>().Play();
         }
 
         if ( transform.position.x < -screenBoundary )
