@@ -167,9 +167,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ashot: {fileID: 3173667861015261987, guid: f57cc1897ed99a34f9d00f035ecbfac0, type: 3}
-  chance: 9000
   state: 0
   timer: 0
+  chance: 118579
 --- !u!82 &1989909557631187586
 AudioSource:
   m_ObjectHideFlags: 0

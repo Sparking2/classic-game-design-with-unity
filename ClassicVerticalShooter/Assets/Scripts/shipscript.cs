@@ -13,6 +13,7 @@ public class shipscript : MonoBehaviour
     void Start()
     {
         transform.position = new Vector3(0, -2, 0);
+        Application.targetFrameRate = 60;
     }
 
     private void Update()
@@ -20,6 +21,11 @@ public class shipscript : MonoBehaviour
         if ( GameStateScript.state == GameStateScript.GamePlay )
         {
             ShipControl();
+            if ( scoringscript.aliencounter == 0 )
+            {
+                GameStateScript.state = GameStateScript.StartPlaying;
+                scoringscript.level++;
+            }
         }
 
         if ( GameStateScript.state == GameStateScript.StartPlaying )
