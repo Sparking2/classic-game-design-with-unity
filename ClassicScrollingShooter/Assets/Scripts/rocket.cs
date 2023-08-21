@@ -26,5 +26,11 @@ public class rocket : MonoBehaviour
             Destroy(gameObject);
             Destroy(other.gameObject);
         }
+
+        if ( other.tag == "shipshot" )
+        {
+            Destroy(gameObject);
+            Destroy(other.gameObject);
+        }
     }
 }

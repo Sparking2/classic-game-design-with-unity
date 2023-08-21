@@ -2,6 +2,8 @@
 
 public class scrollingship : MonoBehaviour
 {
+    public GameObject shotPrefab;
+
     void Start() { }
 
     void Update()
@@ -15,6 +17,12 @@ public class scrollingship : MonoBehaviour
         if ( Input.GetKey("s") )
         {
             transform.Translate(0, -0.8f * Time.deltaTime, 0);
+        }
+
+        if ( Input.GetKeyDown("space") )
+        {
+            Instantiate(shotPrefab, new Vector3(transform.position.x, transform.position.y, 0.0f),
+                Quaternion.AngleAxis(90, Vector3.forward));
         }
     }
 }
