@@ -8,6 +8,7 @@ TagManager:
   - terrain
   - Level_1
   - shipshot
+  - saucershot
   layers:
   - Default
   - TransparentFX
