@@ -121,6 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05d456d7269b48f6a65509d9a2a0ed66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 49cefcc15c4833b45868c5494afa6ea3, type: 3}
   shotspeed: 1
 --- !u!54 &6921966867021633312
 Rigidbody:

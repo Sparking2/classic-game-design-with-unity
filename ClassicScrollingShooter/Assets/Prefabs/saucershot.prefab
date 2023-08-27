@@ -149,3 +149,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shotspeed: -1
+  clip: {fileID: 8300000, guid: 49cefcc15c4833b45868c5494afa6ea3, type: 3}

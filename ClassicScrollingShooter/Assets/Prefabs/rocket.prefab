@@ -4941,6 +4941,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 373e0144fd754107bdced569e633e31e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 49cefcc15c4833b45868c5494afa6ea3, type: 3}
   rocketSpeed: 0.5
 --- !u!54 &4993361036027545966
 Rigidbody:

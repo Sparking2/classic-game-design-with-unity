@@ -3,6 +3,7 @@
 public class scrollingship : MonoBehaviour
 {
     public GameObject shotPrefab;
+    public AudioClip clip;
 
     void Start() { }
 
@@ -27,13 +28,15 @@ public class scrollingship : MonoBehaviour
         {
             Instantiate(shotPrefab, new Vector3(transform.position.x, transform.position.y, 0.0f),
                 Quaternion.AngleAxis(90, Vector3.forward));
-        }
+            gameObject.GetComponent<AudioSource>().Play();
+            }
     }
 
     private void OnTriggerEnter( Collider other )
     {
         if ( other.tag == "terrain" )
         {
+            AudioSource.PlayClipAtPoint(clip,gameObject.transform.position,1.0f);
             Destroy(gameObject);
         }
     }

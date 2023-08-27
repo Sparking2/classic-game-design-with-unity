@@ -4,6 +4,7 @@ using UnityEngine;
 public class saucershot : MonoBehaviour
 {
     public float shotspeed = -1.0f;
+    public AudioClip clip;
 
     private void Start() { }
 
@@ -22,11 +23,13 @@ public class saucershot : MonoBehaviour
     {
         if ( other.tag == "terrain" )
         {
+            AudioSource.PlayClipAtPoint(clip,gameObject.transform.position,1.0f);
             Destroy(gameObject);
         }
 
         if ( other.tag == "scrollingship" )
         {
+            AudioSource.PlayClipAtPoint(clip,gameObject.transform.position,1.0f);
             Destroy(gameObject);
             Destroy(other.gameObject);
         }

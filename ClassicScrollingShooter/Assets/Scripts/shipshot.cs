@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class shipshot : MonoBehaviour
 {
+    public AudioClip clip;
     public float shotspeed = 1.0f;
 
     private void Start() { }
@@ -22,6 +23,7 @@ public class shipshot : MonoBehaviour
     {
         if ( other.tag == "terrain" )
         {
+            AudioSource.PlayClipAtPoint(clip,gameObject.transform.position,1.0f);
             Destroy(gameObject);
         }
     }

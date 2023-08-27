@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class rocket : MonoBehaviour
 {
+    public AudioClip clip;
     public float rocketSpeed;
     private float flighttime = 0.0f;
 
@@ -30,12 +31,14 @@ public class rocket : MonoBehaviour
     {
         if ( other.tag == "scrollingship" )
         {
+            AudioSource.PlayClipAtPoint(clip,gameObject.transform.position,1.0f);
             Destroy(gameObject);
             Destroy(other.gameObject);
         }
 
         if ( other.tag == "shipshot" )
         {
+            AudioSource.PlayClipAtPoint(clip,gameObject.transform.position,1.0f);
             Destroy(gameObject);
             Destroy(other.gameObject);
         }
@@ -44,6 +47,7 @@ public class rocket : MonoBehaviour
         {
             if ( other.tag == "terrain" )
             {
+                AudioSource.PlayClipAtPoint(clip,gameObject.transform.position,1.0f);
                 Destroy(gameObject);
             }
         }

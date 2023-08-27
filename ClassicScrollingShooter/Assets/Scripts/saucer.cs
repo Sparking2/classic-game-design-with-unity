@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class saucer : MonoBehaviour
 {
+    public AudioClip clip;
+    
     public GameObject saucershot;
 
     public float radius = 0.2f;
@@ -49,12 +51,14 @@ public class saucer : MonoBehaviour
     {
         if ( other.tag == "scrollingship" )
         {
+            AudioSource.PlayClipAtPoint(clip,gameObject.transform.position,1.0f);
             Destroy(gameObject);
             Destroy(other.gameObject);
         }
 
         if ( other.tag == "shipshot" )
         {
+            AudioSource.PlayClipAtPoint(clip,gameObject.transform.position,1.0f);
             Destroy(other.gameObject);
             Destroy(gameObject);
         }

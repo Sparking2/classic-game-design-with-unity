@@ -107,5 +107,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bf6671c8e134c57bd48de285dfedd95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 49cefcc15c4833b45868c5494afa6ea3, type: 3}
   saucershot: {fileID: 1084018420605283728, guid: 531e2917ba2782f47aa8aa3f60f7076d, type: 3}
   radius: 0.2
