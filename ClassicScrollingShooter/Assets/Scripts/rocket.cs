@@ -4,6 +4,7 @@ using UnityEngine;
 public class rocket : MonoBehaviour
 {
     public float rocketSpeed;
+    private float flighttime = 0.0f;
 
     void Start() { }
 
@@ -15,7 +16,13 @@ public class rocket : MonoBehaviour
             if ( player.transform.position.x - transform.position.x < 0.5f )
             {
                 transform.Translate(0, rocketSpeed * Time.deltaTime, 0);
+                flighttime += Time.deltaTime;
             }
+        }
+
+        if ( flighttime > 5.0f )
+        {
+            Destroy(gameObject);
         }
     }
 
@@ -31,6 +38,14 @@ public class rocket : MonoBehaviour
         {
             Destroy(gameObject);
             Destroy(other.gameObject);
+        }
+
+        if ( flighttime > 1.0f )
+        {
+            if ( other.tag == "terrain" )
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }
