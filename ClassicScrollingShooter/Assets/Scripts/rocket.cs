@@ -38,6 +38,7 @@ public class rocket : MonoBehaviour
 
         if ( other.tag == "shipshot" )
         {
+            scoring.score += 900;
             AudioSource.PlayClipAtPoint(clip,gameObject.transform.position,1.0f);
             Destroy(gameObject);
             Destroy(other.gameObject);

@@ -58,6 +58,7 @@ public class saucer : MonoBehaviour
 
         if ( other.tag == "shipshot" )
         {
+            scoring.score += 900;
             AudioSource.PlayClipAtPoint(clip,gameObject.transform.position,1.0f);
             Destroy(other.gameObject);
             Destroy(gameObject);
