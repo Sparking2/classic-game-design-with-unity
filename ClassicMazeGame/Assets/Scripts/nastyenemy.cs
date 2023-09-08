@@ -5,6 +5,7 @@ public class nastyenemy : MonoBehaviour
 {
     public float factor = 5.0f;
     private Vector3 initPosition;
+    public AudioClip enemysound;
 
     private void Start()
     {
@@ -31,6 +32,7 @@ public class nastyenemy : MonoBehaviour
     {
         if ( collision.gameObject.name == "player" )
         {
+            AudioSource.PlayClipAtPoint(enemysound, transform.position, 1.0f);
             collision.gameObject.transform.position = new Vector3(0, 0.5f, 0.81f);
             RestorePosition();
         }

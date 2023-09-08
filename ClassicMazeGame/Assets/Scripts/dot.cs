@@ -2,11 +2,14 @@
 
 public class dot : MonoBehaviour
 {
-        private void OnTriggerEnter( Collider other )
+    public AudioClip dotsound;
+
+    private void OnTriggerEnter( Collider other )
+    {
+        if ( other.name == "player" )
         {
-                if ( other.name == "player" )
-                {
-                        Destroy(gameObject);
-                }
+            AudioSource.PlayClipAtPoint(dotsound, transform.position, 1.0f);
+            Destroy(gameObject);
         }
+    }
 }

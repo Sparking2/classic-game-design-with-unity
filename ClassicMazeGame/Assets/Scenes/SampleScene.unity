@@ -913,6 +913,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66d7e945481441438be4db36471b708a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aleft: {fileID: 8300000, guid: a7ab1ce5ca1c1294da2313fbb0863a5f, type: 3}
+  aright: {fileID: 8300000, guid: 96f1fdf40251fb34aa8679080ef498ed, type: 3}
+  aup: {fileID: 8300000, guid: 6cfefe2602cc9ba4c858101e100e86a4, type: 3}
+  adown: {fileID: 8300000, guid: f52b76951d7adc14eb61b32c92c0d5b6, type: 3}
 --- !u!1001 &1964911538
 PrefabInstance:
   m_ObjectHideFlags: 0
