@@ -18,13 +18,14 @@ public class nastyenemy : MonoBehaviour
 
     private void Update()
     {
-        Vector3 dir = new Vector3(0, 0, 0);
+        var dir = new Vector3(0, 0, 0);
         GameObject player = GameObject.Find("player");
         if ( player )
         {
             dir = player.transform.position - transform.position;
             GetComponent<Rigidbody>()
-                .AddForce(dir * factor * ( 0.6f + 0.2f * scoring.level ));
+                .AddForce(dir * factor * ( 0.6f + 0.2f * scoring.level ) *
+                          0.01f);
         }
     }
 
