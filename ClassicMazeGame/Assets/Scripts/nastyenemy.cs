@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class nastyenemy : MonoBehaviour
 {
@@ -24,7 +23,8 @@ public class nastyenemy : MonoBehaviour
         if ( player )
         {
             dir = player.transform.position - transform.position;
-            GetComponent<Rigidbody>().AddForce(dir * factor);
+            GetComponent<Rigidbody>()
+                .AddForce(dir * factor * ( 0.6f + 0.2f * scoring.level ));
         }
     }
 
@@ -33,8 +33,10 @@ public class nastyenemy : MonoBehaviour
         if ( collision.gameObject.name == "player" )
         {
             AudioSource.PlayClipAtPoint(enemysound, transform.position, 1.0f);
-            collision.gameObject.transform.position = new Vector3(0, 0.5f, 0.81f);
+            collision.gameObject.transform.position =
+                new Vector3(0, 0.5f, 0.81f);
             RestorePosition();
+            scoring.lives--;
         }
     }
 }
